@@ -1,40 +1,123 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Abhishek Pal's Full-Stack Portfolio & AI Playground
+This repository contains the code for my personal portfolio and an advanced AI-powered chat application. The project is built with a modern, full-stack architecture, featuring a decoupled frontend and backend to showcase a wide range of web development and AI engineering skills.
 
-## Getting Started
+🚀 Live Links
+Frontend (Portfolio): abhishek-portfolio.vercel.app  (<-- Yahan apna Vercel URL daalein)
 
-First, run the development server:
+Backend (API Health): abhishek-pal-api.onrender.com/health (<-- Yahan apna Render URL daalein)
 
-```bash
+✨ Key Features
+Portfolio Section
+Dynamic Content: All portfolio data (experience, projects, skills, etc.) is fetched live from a MongoDB database via a custom Node.js API.
+
+Component-Based Architecture: Built with React and Next.js, featuring a clean, organized, and reusable component structure.
+
+Modern UI/UX: A fully responsive design with smooth animations and a professional aesthetic, built with Tailwind CSS.
+
+Dual-View Navigation: A smart navbar that provides context-aware navigation for the portfolio and AI chat sections.
+
+🤖 AI Chat (RAG Playground)
+This is a fully-featured Retrieval-Augmented Generation (RAG) application that allows users to chat with documents.
+
+Automatic Portfolio Context: The AI is automatically knowledgeable about my portfolio. Users can ask questions like "What technologies were used at Mensa Brands?" or "List all projects that use Next.js".
+
+Custom Data Interaction: Users can upload their own files (.txt, .md, .pdf) or paste text to create a new context for the AI to answer questions from.
+
+Grounded Answers with Citations: The AI generates answers based only on the provided context and includes citations [1], [2] that link back to the exact source text.
+
+Advanced RAG Pipeline: Implements a professional-grade AI pipeline:
+
+Ingestion & Chunking: Processes and splits documents.
+
+Embedding: Uses Google Gemini's powerful models to convert text to vectors.
+
+Vector Storage & Retrieval: Stores and retrieves information at high speed using Pinecone.
+
+Reranking: Uses Cohere to improve the relevance and quality of retrieved results.
+
+Generation: Uses Groq's Llama 3 for blazing-fast and accurate answer generation.
+
+🏛️ Architecture
+This project follows a decoupled, full-stack architecture:
+
+Frontend: A Next.js application hosted on Vercel. It serves the user interface and contains serverless functions for the AI Chat's backend logic.
+
+Backend: A dedicated Node.js/Express server hosted on Render. Its sole responsibility is to serve portfolio data from the database.
+
+Database: A MongoDB Atlas cluster that stores all portfolio content.
+
+AI Services: The AI Playground's serverless functions communicate with external APIs (Pinecone, Google, Cohere, Groq) to perform the RAG pipeline.
+
+🛠️ Tech Stack
+Category
+
+Technologies
+
+Frontend
+
+⚛️ Next.js,  reacting, 🎨 Tailwind CSS
+
+Backend
+
+🟩 Node.js, 🚀 Express.js
+
+Database
+
+🍃 MongoDB (with Mongoose)
+
+AI Services
+
+🌲 Pinecone (Vector DB), ✨ Google Gemini (Embeddings), 🔗 Cohere (Reranker), ⚡ Groq (LLM Generation)
+
+Deployment
+
+▲ Vercel (Frontend & Serverless Functions), ▶️ Render (Backend Server)
+
+本地设置 (Local Setup)
+To run this project on your local machine, you will need to run both the backend and frontend servers in separate terminals.
+
+1. Backend (abhi-backend repo)
+# Clone the backend repository
+git clone [https://github.com/your-username/portfolio-backend.git](https://github.com/your-username/portfolio-backend.git)
+cd portfolio-backend
+
+# Install dependencies
+npm install
+
+# Create a .env file and add your MongoDB URI
+# MONGODB_URI=mongodb+srv://...
+
+# Run the server
+node index.js
+# The backend will be running at http://localhost:5001
+
+2. Frontend (abhi-portfolio repo)
+# Clone this repository
+git clone [https://github.com/your-username/abhishek-portfolio.git](https://github.com/your-username/abhishek-portfolio.git)
+cd abhishek-portfolio
+
+# Install dependencies
+npm install
+
+# Create a .env.local file and add all your API keys
+# See .env.example for the required keys
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Open http://localhost:3000 in your browser
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+.env.local Example for Frontend:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+NEXT_PUBLIC_API_URL=http://localhost:5001
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+PINECONE_API_KEY=...
+GOOGLE_API_KEY=...
+COHERE_API_KEY=...
+GROQ_API_KEY=...
 
-## Learn More
+🤝 Let's Connect!
+I'm always open to connecting with other developers and recruiters. Feel free to reach out!
 
-To learn more about Next.js, take a look at the following resources:
+GitHub: @Abhishekpal28
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# abhi-portfolio-chatbot
->>>>>>> dfbc5f8e5b0f24b84781d907b8402e5270c15dbf
+LinkedIn: Abhishek Pal
